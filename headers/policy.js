@@ -34,7 +34,7 @@ var codes={'arizona':'AZ','alabama':'AL','alaska':'AK','arkansas':'AR','californ
     'repTemplate': '[INSERT TEMPLATE EMAIL]',
   }
 
-setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
+setTimeout(function() { $('#page')[0].style.visibility = 'visible' }, 2500);
 
 $( document ).ready(function() {
   console.log("ready!");
