@@ -1,10 +1,3 @@
-<script src="/s/jquerymin.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/findAndReplaceDOMText/0.4.6/findAndReplaceDOMText.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
-<!-- <script>$('#siteWrapper').hide()</script> !-->
-<style>#page{visibility:hidden}</style>
-<script>
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
   var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -44,18 +37,6 @@ var codes={'arizona':'AZ','alabama':'AL','alaska':'AK','arkansas':'AR','californ
 setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
 
 $( document ).ready(function() {
-
-  findAndReplaceDOMText(document.getElementById('page'), {
-    preset: 'prose',
-    find: '/\{\{\w+\}\}/g', //replicate templating syntax
-    replace: function replace(portion, match) {
-      var el = document.createElement('span');
-      el.innerHTML = match 
-      el.hidden = true
-      return el;
-    }
-  })
-
   console.log("ready!");
   var currState = getUrlParameter('state').toLowerCase()
 
@@ -92,5 +73,3 @@ $( document ).ready(function() {
   });
 
 });
-
-</script>
